@@ -13,7 +13,7 @@ cache: #같은 의존성은 다음 배포 때부터 다시 받지 않도록 설�
     - '$HOME/.gradle'
 script: "./gradlew clean build'
 
-#CI 실행 완료 시 메일로 알리기
+# CI 실행 완료 시 메일로 알리기
 notifications:
   email:
     recipients:
