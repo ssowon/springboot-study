@@ -8,6 +8,10 @@ branches:
 
 before_install:
   - chmod +x gradlew
+  - zip -r springboot-study
+  - mkdir -p deploy
+  - mv springboot-study.zip deploy/springboot-study.zip
+
 
 # Travis CI 서버의 Home
 cache:
@@ -15,8 +19,20 @@ cache:
     - '$HOME/.m2/repository'
     - '$HOME/.gradle'
 
+script:
+  - chmod +x ./gradlew build connectedCheck
+  - "./gradlew clean build"
 
-script: "./gradlew clean build"
+deploy:
+  - provider: s3
+    access_key_id: $AWS_ACCESS_KEY # Travis repo settings에 설정된 값
+    secret_access_key: $AWS_SECRET_KEY # Travis repo settings에 설정된 값
+    bucket: springboot-study-build # S3 버킷
+    region: ap-northeast-2
+    skip_cleanup: true
+    acl: private # zip 파일 접근을 private으로
+    local_dir: deploy # before_deploy에서 생성한 디렉토리
+    wait-until-deployed: true
 
 # CI 실행 완료시 메일로 알람
 notifications:
