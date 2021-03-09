@@ -6,13 +6,6 @@ branches:
   only:
     - master
 
-before_install:
-  - chmod +x gradlew
-  - zip -r springboot-study
-  - mkdir -p deploy
-  - mv springboot-study.zip deploy/springboot-study.zip
-
-
 # Travis CI 서버의 Home
 cache:
   directories:
@@ -22,6 +15,12 @@ cache:
 script:
   - chmod +x ./gradlew build connectedCheck
   - "./gradlew clean build"
+
+before_install:
+  - chmod +x gradlew
+  - zip -r springboot-study
+  - mkdir -p deploy
+  - mv springboot-study.zip deploy/springboot-study.zip
 
 deploy:
   - provider: s3
