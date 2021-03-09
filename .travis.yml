@@ -13,11 +13,9 @@ cache:
     - '$HOME/.gradle'
 
 script:
-  - chmod +x ./gradlew build connectedCheck
   - "./gradlew clean build"
 
 before_install:
-  - chmod +x gradlew
   - zip -r springboot-study
   - mkdir -p deploy
   - mv springboot-study.zip deploy/springboot-study.zip
