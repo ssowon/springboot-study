@@ -1,5 +1,9 @@
 # springboot-study
-스프링부트에 입문하며 처음 도전한 프로젝트입니다.
+* 스프링부트에 입문하며 처음 도전한 프로젝트입니다.
+* 소셜 로그인을 통해 사용할 수 있는 CRUD게시판입니다. 
+* AWS ec2를 활용하여 배포하였으며 프리티어인 관계로 인스턴스를 자주 꺼서 접속이 안 될 수 있습니다.
+* http://ec2-3-36-163-12.ap-northeast-2.compute.amazonaws.com:8080/
+
 이동욱님의 블로그를 참고하여 개발했습니다. https://jojoldu.tistory.com/250?category=635883
 
 ## 개발환경
