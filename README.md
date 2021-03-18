@@ -2,7 +2,7 @@
 스프링부트에 입문하며 처음 도전한 프로젝트입니다.
 이동욱님의 블로그를 참고하여 개발했습니다. https://jojoldu.tistory.com/250?category=635883
 
-##개발환경
+## 개발환경
 * IDE : IntelliJ IDEA Pro
 * Git Tools : Source Tree
 * OS : Window
@@ -10,7 +10,7 @@
 * Java8
 * Gradle
 
-##적용한 기술
+## 적용한 기술
 * JUnit 테스트
 * JPA
 * 그레이들
@@ -20,7 +20,7 @@
 * Travis CI, Codedeploy : CI & CD
 * NginX : 무중단 배포
 
-##Dependencies
+## Dependencies
 * Core의 Lombok
 * Web의 Web
 * SQL의 JPA, H2
